@@ -1,0 +1,177 @@
+/* logo */
+.logo{
+    height: 4rem;
+     object-fit:cover;
+     border-radius: 25px;
+ 
+  }
+/*el nav*/
+ *{
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    padding-left: 3.5rem;
+    margin-left: 1rem;
+
+}
+nav.navbar {
+     display: flex;
+    justify-content:center ;
+      text-align: center;
+    align-items: center;
+    height: 5rem;
+    background: linear-gradient(to bottom, #222121, #000000, #000000, #222121); 
+    color: #d4cfc9;
+    font-weight: bold;
+    font-size: 1.3rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.8);
+    z-index: 10;
+    
+}
+.color{
+    border-radius: 10px;
+    background-color: #333333;
+    padding: 20px;
+}
+.buscador{
+    width: 100px;
+}
+
+/* hasta aca termina el nav */
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+ 
+    background-color: blue;
+    background: linear-gradient(to bottom, #0D0D0D, #0D0D0D, #0D0D0D, #0D0D0D); 
+    background-size: cover;
+    background-attachment: fixed; /*hace que no se mueva la img de fondo o en este caso el color*/
+    background-position: center;
+    font-family: 'Georgia', serif;
+  }
+
+ /* arranca el main */
+
+ /* carrusel / el coso que cambia de imagen */
+.carousel-item img {
+     max-height: 500px; 
+     margin-top: 2.5rem;
+     min-height: 200px;
+     min-width: 100px;
+    object-fit:contain;   
+    transition: 0.5s all;
+ }
+ .carousel-item img:hover {
+     transform: scale(1.15);
+    border-color: #0d6efd;  
+ }
+
+.carousel{
+    display: flex;
+    justify-content: center;
+    
+     filter: drop-shadow(0px 0px 100px rgb(113, 111, 111));
+
+      width: 100%;
+      height: auto;
+}
+.carousel-item{
+    max-height:500px;
+    min-height: 200px;
+     
+
+ }
+
+ .color-negro{
+    
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+  }
+
+/* animacion de linea recoriendo */
+.contenedor {
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background: #ddd;
+    overflow: hidden;
+    margin-top: 100px;
+  }
+
+  .linea {
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    background: #000000;
+    animation: recorrer 0.8s linear infinite; 
+  }
+  /* explicacion para hacer esta animacion: */
+  /* para hacer animaciones en css se usa keyframes,
+  primero que nada creas un div contenedor que tenga adentro
+  otro div que sera la linea
+  y luego le configuras el ancho,altura,etc,
+  y por ultimo le agrega la variable "animation" para daler animacion
+  el primero valor que se le pone es el nombre de la keyframe
+  luego va los segundos y luego el tipo de linea y por ultimo la cantidad de veces que se repetira */
+
+  @keyframes recorrer {
+    0% {
+
+      left: -100px;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+   /* arranca el contenedorPadre */
+#contenedorPadre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+      margin: 10px;
+ }
+.contenedorTarjetas{
+     width: 70vw;
+    height: auto;
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     
+}
+
+div .estiloDeTarjeta{ /* entro dentro del div */
+    width: 18rem;
+     color:white;
+    transition: all 0.3s ease;
+    max-height: 500px;
+    object-fit: cover;
+    margin: 10px;
+    box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.4); 
+    transition: 0.3s all;
+ }
+ .estiloDeTarjeta:hover {
+    transform: scale(1.03);
+    border-color: #0d6efd;  
+    box-shadow: 0px 58px 40px rgba(0, 0, 0, 0.4);
+   
+  }
+ /* termina el contenedorPadre */
+
+
+
+ /* termina el main */
+
+ /*
+ probar img 
+ */
+.navbar-brand{
+   height: 20px;
+ }
